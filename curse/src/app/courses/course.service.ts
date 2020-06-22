@@ -7,17 +7,24 @@ import {Injectable} from './@angular/core';
 
 export class CourseService{
 
-	retriveAll(): Course[]{
-		return COURSES;
+	private courseUrl = string = 'http://localhost:3100/api/courses';
+
+	constructor(private httpClient: HttpClient){
+
 	}
-	retriveById(id:number):Course{
-		returm COURSES.find((courseIterator:Course) => courseIterator.id === id);
+
+	retriveAll(): Observable<Course[]>{
+		return this.httpClient.get<Course[]>(this.courseUrl);
+	}
+	retriveById(id:number):Obeservable<Course{
+		returm this.httpClient.get<Course>('#{this.courseUrl/${id}');
 	}
 
 	save(course: Course) : void{
 		if(course.id){
-			const index = course.findIndex((courseIterator: Course) => courseIterator.id === course.id);
-			COURSES[index] = course;
+			return this.httpClient.put<course>('${this.courseUrl}/${course.id}',course);
+		}else{
+			return this.httpClient.post<course>('$this.courseUrl',course);
 		}
 	}
 }
