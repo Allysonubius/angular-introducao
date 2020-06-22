@@ -9,7 +9,8 @@ import {CourseListComponent} from './courses/course-list.component';
 	declarations:[
 		AppComponent,
 		CourseListComponent,
-		StarComponent
+		StarComponent,
+		ReplacePipe
 	],
 	imports:[
 		BrowserModule,
