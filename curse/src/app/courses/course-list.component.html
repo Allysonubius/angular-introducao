@@ -27,6 +27,9 @@
 			<td>{{ course.code | lowerCase | replace: '-' : ' '}}</td>
 			<td>{{ course.releaseDate | date: 'dd/MM/yyyy'}}</td>
 			<td><app-star [rating]="course.rating"></app-star></td>
+			<td>
+				<a [routerLink]="['/courses/infor' , course.id]" class="btn btn-primary">Edit</a>
+			</td>
 		</tr>
 	</tbody>
 </table>
