@@ -8,11 +8,12 @@ import {CourseListComponent} from './courses/course-list.component';
 @NgModule({
 	declarations:[
 		AppComponent,
-		CourseListComponent
+		CourseListComponent,
+		StarComponent
 	],
 	imports:[
 		BrowserModule,
-		FormsModule
+		FormsModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent]
