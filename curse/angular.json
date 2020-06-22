@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "curse"
+    }
+  },
+  "defaultProject": "curse",
+  "cli": {
+    "analytics": "4c4fd25b-220b-4a8a-a631-8666f60e216b"
+  }
 }
