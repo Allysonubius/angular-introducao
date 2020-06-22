@@ -6,14 +6,18 @@ import {Component, OnInit} from '@amgular/core';
 
 export class CourseInforComponent implements OnInit{
 	
-	courseId: number;
+	course: Course;
 
-	constructor(private activateRoute: ActivateRoute){
+	constructor(private activateRoute: ActivateRoute, private courseService: CourseService){
 
 	}
 
 	ngOnInit() : void{
-		this.courseId = this.activateRoute.snapshot.paraMap.get('id');
+		this.course = this.courseService.retriveById(+this.activateRoute.snapshot.paraMap.get('id'));
+	}
+
+	save() : void{
+		this.courseService.save(this.course);
 	}
 
 }
