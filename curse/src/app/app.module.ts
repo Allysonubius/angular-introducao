@@ -8,6 +8,7 @@ import {AppComponent} from './app.component';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {CourseModule} from './courses/course.module';
 import {ERROR404Component} from './courses/ERROR404/ERROR-404.component';
+import {CoreModule} from './core/core.module';
 
 @NgModule({
 	declarations:[
@@ -19,6 +20,7 @@ import {ERROR404Component} from './courses/ERROR404/ERROR-404.component';
 		BrowserModule,
 		HttpClientModule,
 		CourseModule,
+		CoreModule,
 		RouterModule.forRoot([
 			{
 				path: '', 
