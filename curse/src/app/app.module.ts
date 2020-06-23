@@ -7,14 +7,12 @@ import {HttpClientModule} from '@angular/common/http';
 import {AppComponent} from './app.component';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {CourseModule} from './courses/course.module';
-import {ERROR404Component} from './courses/ERROR404/ERROR-404.component';
 import {CoreModule} from './core/core.module';
 
 @NgModule({
 	declarations:[
 		AppComponent,
-		NavBarComponent,
-		ERROR404Component
+		NavBarComponent
 	],
 	imports:[
 		BrowserModule,
@@ -27,10 +25,7 @@ import {CoreModule} from './core/core.module';
 				redirectTo: 'courses',
 				pathMatch: 'full'
 			},
-			{
-				path: '**',
-				component: ERROR404Component
-			}
+			
 		])
 	],
 	providers: [],
